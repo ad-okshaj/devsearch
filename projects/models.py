@@ -23,6 +23,10 @@ class Project(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        # -created or created ie. oldest first or newest first.
+        ordering = ['created']
+
 
 class Review(models.Model):
     VOTE_TYPE = (
